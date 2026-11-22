@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CODE 20 LIVE CAMS | Real-Time Cam Network</title>
+<meta name="description" content="CODE 20 is a real-time cam network streaming live, unedited footage from locations around the world, 24 hours a day.">
+<meta property="og:title" content="CODE 20 LIVE CAMS | Real-Time Cam Network">
+<meta property="og:description" content="Live cams. Real time. No filter.">
+<style>
+  /* CODE 20 brand kit: flat, no gradients, no shadows */
+  :root{
+    --blue:#185FA5;   /* primary */
+    --navy:#042C53;   /* wordmark, dark */
+    --coral:#D85A30;  /* "20" accent */
+    --gray:#5F5E5A;   /* tagline, secondary */
+    --white:#FFFFFF;
+    --paper:#F4F6F9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Arial,Helvetica,sans-serif;color:var(--navy);background:var(--white);min-height:100vh;display:flex;flex-direction:column}
+  a{color:inherit}
+
+  header{background:var(--navy);color:var(--white);padding:18px clamp(20px,5vw,64px);display:flex;justify-content:space-between;align-items:center}
+  .mini{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.04em}
+  .mini img{width:36px;height:36px;border-radius:8px;background:var(--blue)}
+  .mini .twenty{color:var(--coral)}
+  .live{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.14em}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--coral);animation:blink 1.6s infinite}
+  @keyframes blink{50%{opacity:.25}}
+
+  .hero{background:var(--navy);color:var(--white);padding:clamp(48px,9vw,110px) clamp(20px,5vw,64px) clamp(56px,9vw,120px);border-top:1px solid rgba(255,255,255,.08)}
+  .wrap{max-width:1040px;margin:0 auto}
+  .lockup{display:flex;align-items:center;gap:clamp(18px,3vw,32px);flex-wrap:wrap}
+  .lockup img{width:clamp(96px,14vw,150px);height:auto;border-radius:22px;background:var(--blue)}
+  .word{font-size:clamp(52px,9vw,104px);font-weight:700;line-height:1;letter-spacing:.01em}
+  .word .twenty{color:var(--coral)}
+  .tagline{margin-top:14px;padding-top:12px;border-top:2px solid var(--blue);font-size:clamp(13px,1.6vw,18px);font-weight:700;letter-spacing:.22em;color:#B9C4D2}
+  .lead{margin-top:36px;font-size:clamp(18px,2.2vw,23px);line-height:1.5;max-width:700px;color:#DCE3EC}
+  .lead strong{color:var(--white)}
+  .cta{margin-top:32px;display:flex;flex-wrap:wrap;gap:14px}
+  .btn{display:inline-block;padding:14px 24px;border-radius:6px;font-weight:700;text-decoration:none;font-size:15px}
+  .btn.coral{background:var(--coral);color:var(--white)}
+  .btn.outline{border:2px solid var(--blue);color:var(--white)}
+  .btn:hover{opacity:.9}
+
+  .cards{background:var(--paper);padding:clamp(48px,7vw,88px) clamp(20px,5vw,64px)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+  .card{background:var(--white);border:1px solid #DDE3EA;border-top:4px solid var(--blue);border-radius:8px;padding:26px}
+  .card .k{font-size:11px;font-weight:700;letter-spacing:.18em;color:var(--coral);margin-bottom:10px}
+  .card h3{font-size:19px;margin-bottom:8px;color:var(--navy)}
+  .card p{font-size:15px;line-height:1.55;color:var(--gray)}
+
+  footer{background:var(--navy);color:#B9C4D2;padding:24px clamp(20px,5vw,64px);font-size:12px;line-height:1.6}
+  footer .row{max-width:1040px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer a{color:var(--white)}
+  .social{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .social .mail{margin-right:6px;text-decoration:none}
+  .social a[aria-label]{width:36px;height:36px;border-radius:50%;background:var(--blue);display:grid;place-items:center}
+  .social a[aria-label]:hover{background:var(--coral)}
+  .social svg{width:17px;height:17px;fill:var(--white)}
+</style>
+</head>
+<body>
+  <header>
+    <div class="mini"><img src="logo.png" alt="" onerror="this.remove()"><span>CODE <span class="twenty">20</span></span></div>
+    <div class="live"><span class="dot"></span>LIVE 24/7</div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="lockup">
+        <img src="logo.png" alt="CODE 20 logo" onerror="this.remove()">
+        <div>
+          <div class="word">CODE <span class="twenty">20</span></div>
+          <div class="tagline">REAL-TIME CAM NETWORK</div>
+        </div>
+      </div>
+      <p class="lead">Live, unedited footage from locations around the world, 24 hours a day. <strong>Live cams. Real time. No filter.</strong></p>
+      <div class="cta">
+        <a class="btn coral" href="https://www.youtube.com/@CODE20LIVECAMS" target="_blank" rel="noopener">&#9654; Watch Live on YouTube</a>
+        <a class="btn outline" href="mailto:info@CODE20.com">info@CODE20.com</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cards">
+    <div class="wrap grid">
+      <div class="card">
+        <div class="k">WATCH</div>
+        <h3>Live Cams</h3>
+        <p>Real-time views streaming around the clock. New sites added regularly.</p>
+      </div>
+      <div class="card">
+        <div class="k">HOST</div>
+        <h3>Host a CODE 20 Camera</h3>
+        <p>Have a great vantage point? Waterfront, railway or overlook, we install at no cost to you.</p>
+      </div>
+      <div class="card">
+        <div class="k">LICENSE</div>
+        <h3>Broadcasters</h3>
+        <p>License live beauty shots. Feeds available via RTMP, SRT and HLS.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="row">
+      <div>&copy; <span id="yr"></span> CODE 20. All streams and footage are the property of CODE 20 and may not be used without express written permission.</div>
+      <div class="social">
+        <a href="mailto:info@CODE20.com" class="mail">info@CODE20.com</a>
+        <a href="https://www.youtube.com/@CODE20LIVECAMS" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
