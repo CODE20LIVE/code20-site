@@ -130,3 +130,4 @@ footer .wrap{padding-top:40px;padding-bottom:32px}
 .social svg{width:18px;height:18px;fill:var(--white)}
 .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:20px;font-size:12px}
 .foot-bottom a{color:var(--white)}
+.page-hero .chip{background:var(--blue)}
