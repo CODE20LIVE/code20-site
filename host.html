@@ -77,6 +77,7 @@
         <input type="hidden" name="_subject" value="New camera host inquiry - code20.com">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_autoresponse" value="Thanks for your interest in hosting a CODE 20 camera. We received your location details and will review the view, access, power and connectivity, then follow up by email. Watch our live cams anytime at https://code20.com - CODE 20 | Real-Time Cam Network">
         <input type="hidden" name="_next" value="https://code20.com/thanks.html">
         <input type="text" name="_honey" style="display:none">
         <div class="grid2">
@@ -134,7 +135,7 @@ document.querySelectorAll('form[data-c20]').forEach(function(f){
     var msg=f.querySelector('.form-msg');
     fetch('https://formsubmit.co/ajax/info@CODE20.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
       .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
-      .then(function(x){ if(x.ok && String(x.j.success)==='true'){ window.location.href='thanks.html'; } else { throw new Error(x.j.message||'Send failed'); } })
+      .then(function(x){ if(x.ok && String(x.j.success)==='true'){ window.location.href='thanks.html?f=host'; } else { throw new Error(x.j.message||'Send failed'); } })
       .catch(function(){ b.disabled=false; b.textContent=t; msg.style.display='block'; });
   });
 });
