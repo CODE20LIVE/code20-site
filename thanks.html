@@ -28,13 +28,31 @@
   </header>
 
   <section class="page-hero" style="flex:1">
-    <div class="wrap">
-      <span class="eyebrow"><span class="dot coral"></span>Received</span>
-      <h1>Thanks. <em>We got it.</em></h1>
-      <p>Your message is on its way to the CODE 20 team. We'll follow up by email soon.</p>
-      <div class="cta"><a class="btn coral" href="index.html#live">Watch live</a><a class="btn outline" href="index.html">Back to home</a></div>
+    <div class="wrap" style="display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,4vw,48px);align-items:center">
+      <img src="logo.jpg" alt="CODE 20" style="width:clamp(110px,16vw,180px);border-radius:50%;border:3px solid var(--coral)">
+      <div>
+        <span class="eyebrow"><span class="dot coral"></span>Message received</span>
+        <h1 id="t-h">Thanks. <em>We got it.</em></h1>
+        <p id="t-p">Your message is on its way to the CODE 20 team. A confirmation is headed to your inbox, and we'll follow up by email soon.</p>
+        <div class="cta"><a class="btn coral" href="index.html#live"><span class="dot"></span> Watch live now</a><a class="btn outline" href="index.html">Back to home</a></div>
+      </div>
     </div>
   </section>
+  <section class="band paper">
+    <div class="wrap">
+      <div class="section-head"><span class="eyebrow">What happens next</span><h2>Here's the plan.</h2></div>
+      <ol class="steps" id="t-steps">
+        <li><h3>Check your inbox</h3><p>A confirmation from CODE 20 is on its way. Check spam if you don't see it in a few minutes.</p></li>
+        <li><h3>We review</h3><p>The CODE 20 team reads every submission personally.</p></li>
+        <li><h3>We follow up</h3><p>Expect an email from info@CODE20.com with next steps.</p></li>
+      </ol>
+    </div>
+  </section>
+<script>
+var f=new URLSearchParams(location.search).get('f');
+if(f==='host'){document.getElementById('t-h').innerHTML='Your view is <em>in the queue.</em>';document.getElementById('t-p').textContent='Thanks for offering your location. We\'ll review the sightline, access, power and connectivity, then follow up by email.';}
+if(f==='bc'){document.getElementById('t-h').innerHTML='Request <em>received.</em>';document.getElementById('t-p').textContent='Thanks for your licensing inquiry. We\'ll follow up with availability, delivery options and terms.';}
+</script>
 
   <footer>
     <div class="wrap">
