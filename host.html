@@ -71,11 +71,12 @@
 
   <section class="band paper" id="apply">
     <div class="wrap" style="max-width:820px">
-      <form class="form-card" action="https://formsubmit.co/info@CODE20.com" method="POST">
+      <form class="form-card" data-c20 action="https://formsubmit.co/info@CODE20.com" method="POST">
         <h2>Host a CODE 20 camera</h2>
         <p>Tell us about your location. We reply to every submission.</p>
         <input type="hidden" name="_subject" value="New camera host inquiry - code20.com">
         <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://code20.com/thanks.html">
         <input type="text" name="_honey" style="display:none">
         <div class="grid2">
@@ -98,6 +99,7 @@
         <div class="field"><label for="h-link">Photo or map link (optional)</label><input id="h-link" type="url" name="Photo or map link" placeholder="Google Maps pin, Google Photos or Dropbox link"></div>
         <button class="btn coral" type="submit">Submit my location</button>
         <p class="small">Your info goes straight to the CODE 20 team and is never sold or shared.</p>
+<p class="form-msg small" style="display:none;color:#D85A30;font-weight:700">Sorry, that didn't go through. Please email us at <a href="mailto:info@CODE20.com">info@CODE20.com</a>.</p>
       </form>
     </div>
   </section>
@@ -124,5 +126,18 @@
     </div>
   </footer>
 <script>document.querySelectorAll('.yr').forEach(e=>e.textContent=new Date().getFullYear());</script>
+<script>
+document.querySelectorAll('form[data-c20]').forEach(function(f){
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var b=f.querySelector('button[type=submit]'); var t=b.textContent; b.disabled=true; b.textContent='Sending...';
+    var msg=f.querySelector('.form-msg');
+    fetch('https://formsubmit.co/ajax/info@CODE20.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
+      .then(function(x){ if(x.ok && String(x.j.success)==='true'){ window.location.href='thanks.html'; } else { throw new Error(x.j.message||'Send failed'); } })
+      .catch(function(){ b.disabled=false; b.textContent=t; msg.style.display='block'; });
+  });
+});
+</script>
 </body>
 </html>
